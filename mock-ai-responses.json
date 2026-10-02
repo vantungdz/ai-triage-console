@@ -1,0 +1,178 @@
+{
+  "REQ-001": {
+    "department": "E-commerce",
+    "priority": "Critical",
+    "confidence": 0.96,
+    "summary": "Customers cannot complete checkout on the storefront.",
+    "proposed_owner": "E-commerce Team",
+    "proposed_steps": [
+      "Verify checkout failure",
+      "Check recent storefront changes",
+      "Review checkout service logs"
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-002": {
+    "department": "E-commerce",
+    "priority": "High",
+    "confidence": 0.92,
+    "summary": "Store checkout is failing for customers.",
+    "proposed_owner": "E-commerce Team",
+    "proposed_steps": [
+      "Compare with active checkout incidents",
+      "Confirm whether this is the same incident"
+    ],
+    "risk_flags": [
+      "duplicate"
+    ],
+    "recommended_state": "Draft",
+    "duplicate_of": "REQ-001"
+  },
+  "REQ-003": {
+    "department": "Marketing",
+    "priority": "High",
+    "confidence": 0.78,
+    "summary": "Marketing requests a third-party tracking pixel.",
+    "proposed_owner": "Marketing Team",
+    "proposed_steps": [
+      "Review tracking vendor",
+      "Confirm security approval before implementation"
+    ],
+    "risk_flags": [
+      "conflict"
+    ],
+    "recommended_state": "Needs Review"
+  },
+  "REQ-004": {
+    "department": "IT",
+    "priority": "High",
+    "confidence": 0.81,
+    "summary": "Security requires unapproved third-party tracking to remain blocked.",
+    "proposed_owner": "IT/Security Team",
+    "proposed_steps": [
+      "Confirm tracking approval status",
+      "Keep unapproved tracking blocked"
+    ],
+    "risk_flags": [
+      "conflict",
+      "security"
+    ],
+    "recommended_state": "Needs Review"
+  },
+  "REQ-005": {
+    "department": "Needs Review",
+    "priority": "Medium",
+    "confidence": 0.32,
+    "summary": "Bilingual request lacks enough context for safe routing.",
+    "proposed_owner": "IT Triage",
+    "proposed_steps": [
+      "Request clarification on the intended system and requested outcome"
+    ],
+    "risk_flags": [
+      "missing-information"
+    ],
+    "recommended_state": "Needs Review"
+  },
+  "REQ-006": {
+    "department": "IT",
+    "priority": "High",
+    "confidence": 0.67,
+    "summary": "Request involves customer data or an access change.",
+    "proposed_owner": "Authorized IT/Security Role",
+    "proposed_steps": [
+      "Verify requester authorization",
+      "Confirm least-privilege access",
+      "Record approval before changing access"
+    ],
+    "risk_flags": [
+      "security",
+      "privacy"
+    ],
+    "recommended_state": "Needs Review"
+  },
+  "REQ-007": {
+    "department": "Needs Review",
+    "priority": "Medium",
+    "confidence": 0.88,
+    "summary": "Request contains instructions attempting to bypass workflow controls.",
+    "proposed_owner": "IT Triage",
+    "proposed_steps": [
+      "Treat request content as untrusted data",
+      "Apply normal validation and Manager approval rules"
+    ],
+    "risk_flags": [],
+    "recommended_state": "Needs Review"
+  },
+  "REQ-008": {
+    "department": "Finance",
+    "priority": "Medium",
+    "confidence": 0.85,
+    "summary": "Investigate why the monthly expense report has not been generated.",
+    "proposed_owner": "Finance Team",
+    "proposed_steps": [
+      "Check report generation status"
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-009": {
+    "department": "HR",
+    "priority": "Medium",
+    "confidence": 0.85,
+    "summary": "Route the HR system request for review.",
+    "proposed_owner": "HR Team",
+    "proposed_steps": [
+      "Review HR request details"
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-010": {
+    "department": "SCM",
+    "priority": "Medium",
+    "confidence": 0.85,
+    "summary": "Review the supply chain operational request.",
+    "proposed_owner": "SCM Team",
+    "proposed_steps": [
+      "Review supply chain request"
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-011": {
+    "department": "Customer Service",
+    "priority": "Medium",
+    "confidence": 0.85,
+    "summary": "Investigate an issue affecting the customer service workflow.",
+    "proposed_owner": "Customer Service Team",
+    "proposed_steps": [
+      "Review the affected workflow"
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-012": {
+    "department": "Production",
+    "priority": "Medium",
+    "confidence": 0.85,
+    "summary": "Review a production system request.",
+    "proposed_owner": "Production Team",
+    "proposed_steps": [
+      "Review the production request"
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "TEST-MALFORMED": {
+    "mode": "malformed",
+    "response": {
+      "department": "IT",
+      "priority": "Super Critical",
+      "confidence": 1.5
+    }
+  },
+  "TEST-TIMEOUT": {
+    "mode": "timeout"
+  }
+}
